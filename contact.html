@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700,900' rel='stylesheet'>
+    <link rel="icon" href="/assets/logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <title>About - CDS Food Finder</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="title">CDS Food Finder</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="find-food.html">Find Food</a></li>
+            <li><a href="contact.html" class="selected-nav">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div>
+            <h3 id="dynamicText">Please leave your reviews here!</h3>
+            <div class="slider no-bottom-margin">
+                <input type="radio" id="option1" name="contact_option" value="option1" checked>
+                <label for="option1">Customer Reviews</label>
+                <input type="radio" id="option2" name="contact_option" value="option2">
+                <label for="option2">Future Businesses</label>
+            </div>
+        </div>
+
+        <div id="reviewsOption" class="form-option">
+            <h3>Leave Feedback!</h3>
+            <form>
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Rating">
+                <textarea placeholder="Review" rows="3"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div id="businessOption" class="form-option" style="display: none;">
+            <h3>Join Us!</h3>
+            <form>
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Business Address">
+                <textarea placeholder="Food Description" rows="3"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023. All Rights Reserved. CDS Food Finder&reg;.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var radios = document.getElementsByName('contact_option');
+    
+            for (var i = 0; i < radios.length; i++) {
+                radios[i].onclick = function () {
+                    document.getElementById("reviewsOption").style.display = (this.value === 'option1') ? "block" : "none";
+                    document.getElementById("businessOption").style.display = (this.value === 'option2') ? "block" : "none";
+                    dynamicText.textContent = (this.value === 'option1') ? 'Please leave your reviews here!' : 'Enter your information to join us!';
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

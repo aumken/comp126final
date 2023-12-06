@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700,900' rel='stylesheet'>
+    <link rel="icon" href="/assets/logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <title>CDS Food Finder</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="title">CDS Food Finder</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" class="selected-nav">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="find-food.html">Find Food</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="image-area" id="slideshow">
+            <p class="credit">Photo by <a
+                    href="https://unsplash.com/@genefoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Gene
+                    Gallin</a> on <a
+                    href="https://unsplash.com/photos/white-and-brown-concrete-building-fe0s2abV8R8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+            </p>
+        </div>
+
+        <div class="page-description">
+            <h2>Find Food <span class="gradient-text">Near You</span>.</h2>
+            <p class="larger-text">Find the best places to eat around campus at a reasonable distance!</p>
+            <a href="find-food.html" class="get-started-button">Get Started</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023. All Rights Reserved. CDS Food Finder&reg;.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const images = [
+                'unc-image1.jpg',
+                'unc-image2.jpg',
+                'unc-image3.jpg',
+                'unc-image4.jpg',
+                'unc-image5.jpg'
+            ];
+            const credits = [
+                'Photo by <a href="https://unsplash.com/@genefoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Gene Gallin</a> on <a href="https://unsplash.com/photos/white-and-brown-concrete-building-fe0s2abV8R8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>',
+                'Photo by <a href="https://unsplash.com/@colincollect?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Colin Rowley</a> on <a href="https://unsplash.com/photos/a-couple-of-people-walking-across-a-brick-walkway-4UE52NgGVII?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>',
+                'Photo by <a href="https://unsplash.com/@mynasaurus?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Myna</a> on <a href="https://unsplash.com/photos/brown-concrete-building-near-road-during-daytime-8p54zweKrMQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>',
+                'Photo by <a href="https://unsplash.com/@colincollect?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Colin Rowley</a> on <a href="https://unsplash.com/photos/a-large-empty-stadium-with-a-green-field-7Q8Kg1XEhR0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>',
+                'Photo by <a href="https://unsplash.com/@colincollect?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Colin Rowley</a> on <a href="https://unsplash.com/photos/a-large-building-with-columns-and-steps-leading-up-to-it-mrto56O9Hrk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>'
+            ];
+            let currentIndex = 0;
+
+            function changeImage() {
+                const imgContainer = document.getElementById('slideshow');
+                const creditText = document.querySelector('.credit');
+
+                imgContainer.style.opacity = 0;
+
+                setTimeout(function () {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    imgContainer.style.backgroundImage = `url('./assets/unc-images/${images[currentIndex]}')`;
+                    creditText.innerHTML = credits[currentIndex];
+                    imgContainer.setAttribute('aria-label', 'UNC Campus Image');
+                    imgContainer.style.opacity = 1;
+                }, 1000);
+            }
+
+            setInterval(changeImage, 5000);
+        });
+    </script>
+</body>
+
+</html>

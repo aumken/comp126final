@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700,900' rel='stylesheet'>
+    <link rel="stylesheet" href="/styles.css">
+    <title>CDS Food Finder</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="title">CDS Food Finder</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/find-food.html" class="selected-nav">Find Food</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="page-description">
+            <h2>Food Near <span class="gradient-text">Avery</span></h2>
+            <img class="dorm-image" src="/assets/dorm-images/avery.jpg" alt="Avery Dorm">
+            <p class="no-bottom-margin larger-text">Choose how to sort your results.</p>
+            <div class="slider no-bottom-margin">
+                <input type="radio" id="sort-alpha" name="sort" value="alpha" checked>
+                <label for="sort-alpha">Alphabetical</label>
+
+                <input type="radio" id="sort-distance" name="sort" value="distance">
+                <label for="sort-distance">Distance</label>
+
+                <input type="radio" id="sort-rating" name="sort" value="rating">
+                <label for="sort-rating">Ratings</label>
+            </div>
+        </div>
+
+        <div class="restaurant-list">
+            <a class="restaurant-button" data-distance="0.4" data-rating="3.0" href="/restaurants/alpine-bagel-cafe.html">Alpine Bagel Cafe<br> 0.4 mi • 3.0 ★</a>
+            <a class="restaurant-button" data-distance="0.4" data-rating="3.3" href="/restaurants/bojangles.html">Bojangles<br> 0.4 mi • 3.3 ★</a>
+            <a class="restaurant-button" data-distance="0.8" data-rating="4.3" href="/restaurants/bonchon.html">Bonchon<br> 0.8 mi • 4.3 ★</a>
+            <a class="restaurant-button" data-distance="1.1" data-rating="4.5" href="/restaurants/chimney.html">Chimney<br> 1.1 mi • 4.5 ★</a>
+            <a class="restaurant-button" data-distance="1.1" data-rating="3.9" href="/restaurants/chipotle.html">Chipotle<br> 1.1 mi • 3.9 ★</a>
+            <a class="restaurant-button" data-distance="1.2" data-rating="4.1" href="/restaurants/cholanad.html">CholaNad<br> 1.2 mi • 4.1 ★</a>
+            <a class="restaurant-button" data-distance="0.9" data-rating="4.4" href="/restaurants/cosmic-cantina.html">Cosmic Cantina<br> 0.9 mi • 4.4 ★</a>
+            <a class="restaurant-button" data-distance="1.5" data-rating="3.4" href="/restaurants/dominos.html">Domino's<br> 1.5 mi • 3.4 ★</a>
+            <a class="restaurant-button" data-distance="0.8" data-rating="4.4" href="/restaurants/four-corners.html">Four Corners<br> 0.8 mi • 4.4 ★</a>
+            <a class="restaurant-button" data-distance="0.8" data-rating="4.5" href="/restaurants/grk-yeero.html">GRK YEERO<br> 0.8 mi • 4.5 ★</a>
+            <a class="restaurant-button" data-distance="0.8" data-rating="4.3" href="/restaurants/hibachi.html">Hibachi & Company<br> 0.8 mi • 4.3 ★</a>
+            <a class="restaurant-button" data-distance="1.4" data-rating="4.6" href="/restaurants/italian-pizzaria-iii.html">Italian Pizzaria III<br> 1.4 mi • 4.6 ★</a>
+            <a class="restaurant-button" data-distance="1.3" data-rating="3.7" href="/restaurants/mcdonalds.html">McDonalds<br> 1.3 mi • 3.7 ★</a>
+            <a class="restaurant-button" data-distance="1.3" data-rating="4.6" href="/restaurants/mediterranean-deli.html">Mediterranean Deli<br> 1.3 mi • 4.6 ★</a>
+            <a class="restaurant-button" data-distance="0.9" data-rating="4.5" href="/restaurants/momos-master.html">Momo's Master<br> 0.9 mi • 4.5 ★</a>
+            <a class="restaurant-button" data-distance="1.1" data-rating="3.6" href="/restaurants/panera-bread.html">Panera Bread<br> 1.1 mi • 3.6 ★</a>
+            <a class="restaurant-button" data-distance="1.1" data-rating="4.6" href="/restaurants/purple-bowl.html">Purple Bowl<br> 1.1 mi • 4.6 ★</a>
+            <a class="restaurant-button" data-distance="1.0" data-rating="4.3" href="/restaurants/que-chula.html">Que Chula<br> 1.0 mi • 4.3 ★</a>
+            <a class="restaurant-button" data-distance="0.9" data-rating="4.2" href="/restaurants/raising-canes.html">Raising Cane's<br> 0.9 mi • 4.2 ★</a>
+            <a class="restaurant-button" data-distance="1.0" data-rating="4.1" href="/restaurants/spicy-9.html">Spicy 9<br> 1.0 mi • 4.1 ★</a>
+            <a class="restaurant-button" data-distance="0.1" data-rating="3.7" href="/restaurants/subway.html">Subway <br> 0.1 mi • 3.7 ★</a>
+            <a class="restaurant-button" data-distance="0.9" data-rating="4.4" href="/restaurants/sup-dogs.html">Sup Dogs<br> 0.9 mi • 4.4 ★</a>
+            <a class="restaurant-button" data-distance="0.8" data-rating="4.7" href="/restaurants/suttons.html">Sutton's Drug Store<br> 0.8 mi • 4.7 ★</a>
+            <a class="restaurant-button" data-distance="0.8" data-rating="4.2" href="/restaurants/time-out.html">Time-Out<br> 0.8 mi • 4.2 ★</a>
+            <a class="restaurant-button" data-distance="1.2" data-rating="3.3" href="/restaurants/tropical-smoothie-cafe.html">Tropical Smoothie Cafe<br> 1.2 mi • 3.3 ★</a>
+        </div>
+    </main>
+    
+    <p class="dorm-credit">Photo by <a href="https://commons.wikimedia.org/wiki/User:Mx._Granger" target="_blank">Mx.
+            Granger</a> on <a href="https://commons.wikimedia.org/wiki/File:Avery_Residence_Hall_at_UNC.jpg"
+            target="_blank">Wikimedia Commons</a></p>
+
+    <footer>
+        <p>&copy; 2023. All Rights Reserved. CDS Food Finder&reg;.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sortOptions = document.querySelectorAll('input[name="sort"]');
+            const restaurantList = document.querySelector('.restaurant-list');
+    
+            function sortRestaurants(sortBy) {
+                let restaurants = Array.from(restaurantList.children);
+    
+                restaurants.sort((a, b) => {
+                    if (sortBy === 'alpha') {
+                        return a.textContent.localeCompare(b.textContent);
+                    } else if (sortBy === 'distance') {
+                        return a.getAttribute('data-distance') - b.getAttribute('data-distance');
+                    } else if (sortBy === 'rating') {
+                        return b.getAttribute('data-rating') - a.getAttribute('data-rating');
+                    }
+                });
+    
+                restaurantList.innerHTML = '';
+                restaurants.forEach(restaurant => restaurantList.appendChild(restaurant));
+            }
+    
+            sortOptions.forEach(option => {
+                option.addEventListener('change', (e) => sortRestaurants(e.target.value));
+            });
+        });
+    </script>
+</body>
+
+</html>
