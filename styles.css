@@ -271,7 +271,7 @@ h2 {
     gap: 1rem;
     padding: 1rem;
     width: 75%;
-    align-self: center;
+    justify-self: center;
     overflow-y: scroll;
 }
 
